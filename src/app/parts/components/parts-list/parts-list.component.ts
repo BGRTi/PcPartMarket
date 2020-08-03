@@ -12,6 +12,7 @@ export class PartsListComponent implements OnInit {
 
   @Output() buyPart: EventEmitter<Part> = new EventEmitter<Part>();
 
+  // Попровить название сервиса - partsServiceService => partsService
   constructor(private partsServiceService: PartsServiceService) { }
 
   parts: Array<Part>;

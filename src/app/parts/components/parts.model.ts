@@ -10,4 +10,3 @@ export class Part {
         public price: number
     ) {}
   }
-  
