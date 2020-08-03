@@ -9,9 +9,9 @@ import { Part } from './parts/components/parts.model';
 })
 export class AppComponent implements OnInit {
   cartList = [];
-  title = 'pc-part-market';
+  title = 'pc-part-market'; // не используется
 
-  ngOnInit() {}
+  ngOnInit(): void {}
 
   onBuyPart(part: Part): void {
     console.log('part added to cart');

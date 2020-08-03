@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Part } from './../../../parts/components/parts.model'
+import { Part } from './../../../parts/components/parts.model';
 
 @Component({
   selector: 'app-cart-list',
@@ -13,6 +13,6 @@ export class CartListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+
   }
 }
