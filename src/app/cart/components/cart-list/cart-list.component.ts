@@ -1,18 +1,22 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import { Part } from './../../../parts/components/parts.model'
+import { Part } from './../../../parts/components/parts.model';
 
 @Component({
   selector: 'app-cart-list',
   templateUrl: './cart-list.component.html',
   styleUrls: ['./cart-list.component.scss']
 })
-export class CartListComponent implements OnInit {
-  @Input()
-  cartList: Array<Part> = [];
+export class CartListComponent {
+  @Input() cartList: Array<Part>;
+
+  emptyCartPrice: number = 0;
+
   constructor() { }
 
-  ngOnInit(): void {
-    
+  getTotalPrice(): number {
+    return this.cartList.reduce((total: number, currentPart: Part) => {
+      return total + currentPart.price;
+    }, this.emptyCartPrice)
   }
 }

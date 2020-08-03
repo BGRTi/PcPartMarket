@@ -1,4 +1,5 @@
-<app-parts-list></app-parts-list>
+<app-parts-list
+    (buyPart)="onBuyPart($event)"></app-parts-list>
 <app-cart-list
-    [cartList]="cartList" (buyPart)="onBuyPart($event)">
+    [cartList]="cartList">
 ></app-cart-list>
