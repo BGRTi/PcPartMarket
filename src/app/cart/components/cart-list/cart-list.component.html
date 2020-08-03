@@ -1,0 +1,10 @@
+<div>
+    <ul *ngIf="cartList; else elseBlock">
+        <li *ngFor="let cartPart of cartList;">
+            <label>Price: {{cartPart.price}}</label>
+        </li>
+    </ul>
+    <ng-template #elseBlock>
+        <label>Cart is empty!</label>
+    </ng-template>
+</div>

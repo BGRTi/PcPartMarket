@@ -1,0 +1,25 @@
+<ul>
+    <li *ngFor="let part of parts;">
+        <div>
+            <label>{{part.name}}</label>
+        </div>
+        <div>
+            <label>Manufacturer: {{part.manufacturer}}</label>
+        </div>
+        <div>
+            <label>Type: {{part.type}}</label>
+        </div>
+        <div>
+            <label>Model: {{part.model}}</label>
+        </div>
+        <div>
+            <label>Price: {{part.price}}</label>
+        </div>
+        <button
+            type="button"
+            class="btn btn-primary" 
+            (click)="onBuyPart(part)">
+            BUY
+        </button>
+    </li>
+</ul>
