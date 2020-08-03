@@ -16,3 +16,4 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// Добавьте функционал в мастер
