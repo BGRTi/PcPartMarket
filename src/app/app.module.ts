@@ -20,3 +20,4 @@ import { CartListComponent } from './cart/components/cart-list/cart-list.compone
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// Добавьте функционал в мастер
