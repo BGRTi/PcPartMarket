@@ -1,7 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { PartsServiceService } from './../parts-service.service';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { PartsServiceService } from '../../services/parts-service.service';
 
-import { Part } from './../parts.model';
+import { Part } from '../../services/parts.model';
 
 @Component({
   selector: 'app-parts-list',

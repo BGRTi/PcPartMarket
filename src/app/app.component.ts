@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Part } from './parts/components/parts.model';
+import { Part } from './parts/services/parts.model';
 
 @Component({
   selector: 'app-root',
