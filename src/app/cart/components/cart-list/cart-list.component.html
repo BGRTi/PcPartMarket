@@ -1,8 +1,21 @@
 <div>
-    <ul *ngIf="cartList; else elseBlock">
-        <li *ngFor="let cartPart of cartList;">
-            <label>Price: {{cartPart.price}}</label>
+    <h3>Cart</h3>
+    <ul *ngIf="cartList.length > 0; else emptyCartBlock">
+        <li *ngFor="let part of cartList; let i = index">
+            <div>Manufacturer: {{part.manufacturer}}</div>
+            <div>Model: {{part.model}}</div>
+            <div>Type: {{part.type}}</div>
+            <div>Price: {{part.price}}</div>
+            <div>
+                <button (click)="onCountDecrease(part, i)">-</button>
+                {{part.count}}
+                <button (click)="onCountIncrease(part)">+</button>
+            </div>
         </li>
+        <label>
+            Total price: {{getTotalPrice()}}
+            Items in cart: {{cartList.length}}
+        </label>
     </ul>
     <ng-template #elseBlock>
         <label>Cart is empty!</label>

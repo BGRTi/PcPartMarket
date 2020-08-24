@@ -5,7 +5,7 @@ import { Part } from './parts.model';
 @Injectable({
   providedIn: 'root'
 })
-export class PartsServiceService {
+export class partsService {
 
   constructor() { }
 

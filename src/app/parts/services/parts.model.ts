@@ -7,7 +7,7 @@ export class Part {
         public manufacturer: string,
         public model: string,
         public type: string,
-        public price: number
+        public price: number,
+        public count: number = 1
     ) {}
   }
-  

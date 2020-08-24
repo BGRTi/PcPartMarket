@@ -1,7 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { PartsServiceService } from './../parts-service.service';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { partsService } from '../../services/parts-service.service';
 
-import { Part } from './../parts.model';
+import { Part } from '../../services/parts.model';
 
 @Component({
   selector: 'app-parts-list',
@@ -12,12 +12,12 @@ export class PartsListComponent implements OnInit {
 
   @Output() buyPart: EventEmitter<Part> = new EventEmitter<Part>();
 
-  constructor(private partsServiceService: PartsServiceService) { }
+  constructor(private partsService: partsService) { }
 
   parts: Array<Part>;
 
   ngOnInit(): void {
-    this.parts = this.partsServiceService.getProducts();
+    this.parts = this.partsService.getProducts();
   }
 
   onBuyPart(currentPart: Partial<Part>): void {
